@@ -1,6 +1,6 @@
 import { Router } from './router';
 import { Route } from './types';
-import { AboutPage, GamePage, ScorePage } from './pages';
+import { AboutPage, GamePage, NotFound404Page, ScorePage } from './pages';
 
 class App {
   // container which contains dynamic content
@@ -63,6 +63,10 @@ const routes: Route[] = [
   {
     path: 'game',
     Component: GamePage,
+  },
+  {
+    path: '**',
+    Component: NotFound404Page,
   },
 ];
 
